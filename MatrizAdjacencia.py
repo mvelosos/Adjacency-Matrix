@@ -1,4 +1,5 @@
-from tabulate import tabulate
+from beautifultable import BeautifulTable
+import numpy as np
 
 vertices = []
 
@@ -51,8 +52,18 @@ letras.sort()
 print(letras)
 
 #Criando a Matriz
-print(tabulate['a', 'b'],['c', 'd'], headers=letras)
+table = BeautifulTable()
 
+
+table.column_headers = letras
+#table.insert_column(1, 'name', letras)
+for i in range(len(letras)):
+    table.append_row(letras)
+print(table)
+
+#http://beautifultable.readthedocs.io/en/latest/source/beautifultable.html
+#http://zetcode.com/python/prettytable/
+#http://beautifultable.readthedocs.io/en/latest/quickstart.html#inserting-rows-and-columns
 
 
 
