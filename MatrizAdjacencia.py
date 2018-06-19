@@ -54,19 +54,17 @@ print(letras)
 #Criando a Matriz
 table = BeautifulTable()
 
+mtx = np.array([])
 
 table.column_headers = letras
-#table.insert_column(1, 'name', letras)
 for i in range(len(letras)):
-    table.append_row(letras)
+    mtx = np.append(mtx, letras)
+    mtx.fill(-1)
+    table.append_row(mtx[:(len(letras))])
+table.insert_column(0, ' ', letras)
+
 print(table)
-
-#http://beautifultable.readthedocs.io/en/latest/source/beautifultable.html
-#http://zetcode.com/python/prettytable/
-#http://beautifultable.readthedocs.io/en/latest/quickstart.html#inserting-rows-and-columns
-
-
-
+#print(mtx, axis=len(letras))
 
 
 
