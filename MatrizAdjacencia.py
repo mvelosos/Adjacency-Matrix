@@ -54,7 +54,7 @@ print(letras)
 #Criando a Matriz
 table = BeautifulTable()
 
-mtx = np.array([])
+mtx = np.matrix([])
 
 table.column_headers = letras
 for i in range(len(letras)):
@@ -65,6 +65,13 @@ table.insert_column(0, ' ', letras)
 
 print(table)
 #print(mtx, axis=len(letras))
+
+aa = np.matrix([[1,2],[3,4]])
+ab = np.array([[1,2],[3,4]])
+
+print(aa)
+print(ab)
+print(mtx)
 
 
 
